@@ -1,7 +1,5 @@
+export default function UserInput({ useInput, onChangehere }) {
 
-
-export default function UserInput({useInput,onChange}) {
-    
 
     return <section id="user-input">
         <div className="input-group">
@@ -9,13 +7,13 @@ export default function UserInput({useInput,onChange}) {
                 <label>
                     Initial Investment
                 </label>
-                <input type="number" required value={useInput.initialInvestment} onChange={(event) => onChange(' initialInvestment', event.target.value)} />
+                <input type="number" required value={useInput.initialInvestment} onChange={(event) => onChangehere(' initialInvestment', event.target.value)} />
             </p>
             <p>
                 <label>
                     Anual Investment
                 </label>
-                <input type="number" required value={useInput.annualInvestment} onChange={(event) => onChange('annualInvestment', event.target.value)} />
+                <input type="number" required value={useInput.annualInvestment} onChange={(event) => onChangehere('annualInvestment', event.target.value)} />
             </p>
         </div>
         <div className="input-group">
@@ -23,13 +21,13 @@ export default function UserInput({useInput,onChange}) {
                 <label>
                     Expected Return
                 </label>
-                <input type="number" required value={useInput.expextedReturn} onChange={(event) => onChange('expextedReturn', event.target.value)} />
+                <input type="number" required value={useInput.expextedReturn} onChange={(event) => onChangehere('expextedReturn', event.target.value)} />
             </p>
             <p>
                 <label>
                     Duration
                 </label>
-                <input type="number" required value={useInput.duration} onChange={(event) => onChange('duration', event.target.value)} />
+                <input type="number" required value={useInput.duration} onChange={(event) => onChangehere('duration', event.target.value)} />
             </p>
         </div>
 

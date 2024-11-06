@@ -14,21 +14,23 @@ function App() {
     }
   )
 
+  const inputIsValid = useInput.duration>=1;
 
   function handleUserInput(inputIdentifier, newValue) {
-    setUserInput(prevInput => {
+    setUserInput((prevInput) => {
       return {
         ...prevInput,
-        [inputIdentifier]: +newValue
-      }
+        [inputIdentifier]: +newValue, 
+      };
     });
   }
 
   return (
     <>
       <Header />
-      <UserInput onChange={handleUserInput} useInput={useInput} />
-      <Result input={useInput} />
+      <UserInput onChangehere={handleUserInput} useInput={useInput} />
+      {!inputIsValid &&  <p className="center ">Please enter an number greater</p>}
+    {inputIsValid &&  <Result input={useInput} />}
     </>
 
   )
